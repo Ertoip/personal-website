@@ -1,31 +1,36 @@
 {
   "background": {
-    "color": "#000000" 
+    "color": "#FFFFFF"
   },
   "interactivity": {
     "events": {
       "onClick": {
         "enable": true,
-        "mode": "repulse"
+        "mode": "attract"
       },
       "resize": true
     },
     "modes": {
+      "attract": {
+        "distance": 300,
+        "duration": 0.4,
+        "speed": 3
+      },
       "push": {
         "quantity": 3
       },
       "repulse": {
-        "distance": 300,
+        "distance": 100,
         "duration": 0.4
       }
     }
   },
   "particles": {
     "color": {
-      "value": "#FFFFFF"  
+      "value": "#000000"
     },
     "links": {
-      "color": "#FFFFFF",  
+      "color": "#000000",
       "distance": 500,
       "frequency": 1,
       "enable": true,
@@ -34,8 +39,8 @@
       "warp": true,
       "shadow": {
         "enable": true,
-        "color": "#FFFFFF",
-        "blur": 10   
+        "color": "#000000",
+        "blur": 10
       }
     },
     "collisions": {

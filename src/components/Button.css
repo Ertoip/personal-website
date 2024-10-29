@@ -1,0 +1,83 @@
+/* Default Button styling */
+.center-button {
+    display: inline-flex; /* Keep inline */
+    align-items: center;
+    justify-content: center;
+    width: 3rem; /* Adjust size to fit inline with text */
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    outline: none;
+    color: #000;
+    font-size: 20px;
+    overflow: hidden;
+    transition: color 0.5s ease, box-shadow 0.5s ease, width 0.5s ease, height 0.5s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: deflate 0.5s forwards;
+    cursor: none;
+    vertical-align: middle; /* Ensure it's aligned with text */
+}
+
+.center-button:hover {
+    /* Change size and shadow smoothly on hover */
+    animation: grow 0.5s forwards;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes grow {
+    0% {
+        width: 3rem;
+        height: 3rem;
+    }
+    100% {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@keyframes deflate {
+    0% {
+        width: 5rem;
+        height: 5rem;
+    }
+    100% {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.center-button.inverted {
+    background-color: black;
+    border: 2px solid black;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay styles */
+.overlay {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: expandOverlay 1s forwards;
+    z-index: 9999;
+    transform-origin: center center;
+}
+
+.overlay.inverted {
+    background-color: black;
+}
+
+@keyframes expandOverlay {
+    from {
+        transform: scale(1);
+        border-radius: 50%;
+    }
+
+    to {
+        transform: scale(100);
+        border-radius: 0%;
+    }
+}

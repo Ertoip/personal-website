@@ -1,48 +1,21 @@
+/* src/App.css */
 .App {
     text-align: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Ensure the cursor is hidden for the entire document */
+body {
+    cursor: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Ensure links do not show the cursor */
+.custom-link {
+    cursor: none;
 }
 
-.App-header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#tsparticles {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    top: 0;
-    z-index: -1;
+/* Handle any other interactive elements that might show a cursor */
+button, input, textarea {
+    cursor: none;
 }

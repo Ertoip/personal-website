@@ -1,0 +1,61 @@
+/* Custom link styling for header links */
+.custom-link {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-size: 1.5rem;
+    cursor: none;
+    position: relative;
+    transition: color 0.05s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: auto;
+    text-decoration: none;
+    margin: 0 2rem; /* Add horizontal margin between links */
+    letter-spacing: 1px;
+}
+
+.custom-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -0.3rem;
+    width: 0;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
+    transform: translateX(-50%);
+    transition: width 0.1s ease-out;
+}
+
+.custom-link:hover::after,
+.custom-link:focus::after {
+    width: 100%;
+}
+
+.custom-link:hover,
+.custom-link:active,
+.custom-link:focus {
+    color: white;
+}
+
+.custom-link-active {
+    color: white;
+}
+
+.custom-link-active::after {
+    width: 100%;
+}
+
+/* Styles when the header is inverted */
+.top-header.inverted .custom-link {
+    color: black;
+}
+
+.top-header.inverted .custom-link::after {
+    border-image: linear-gradient(to right, transparent, #000, transparent) 1;
+}
+
+.top-header.inverted .custom-link:hover,
+.top-header.inverted .custom-link:active,
+.top-header.inverted .custom-link:focus {
+    color: black;
+}

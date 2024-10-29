@@ -1,0 +1,56 @@
+.App-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 4rem); /* Adjust height to account for header */
+    margin-top: 4rem; /* Add margin to push content below the header */
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.name-container {
+    display: inline-flex;
+    align-items: center;
+    font-size: 3rem; /* Adjust size of the name */
+    font-weight: bold;
+    padding: 1rem; /* Add some padding around the text */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Default dark background for standard page */
+    color: white;
+}
+
+.first-name {
+    margin-right: 0.2rem; /* Bring the button closer to "Pietr" */
+}
+
+.last-name {
+    margin-left: 2rem; /* Push the button further from "Avanzini" */
+}
+
+.button-o {
+    display: inline-flex; /* Ensure the button stays inline */
+    vertical-align: middle; /* Align button vertically with the text */
+    width: 3rem; /* Initial size to match the text */
+    height: 3rem;
+}
+
+/* Inverted styles */
+.inverted .App-header {
+    color: black; /* Inverted text color */
+}
+
+.inverted .name-container {
+    background-color: rgba(255, 255, 255, 0.9); /* White background for inverted theme */
+    color: black;
+}
+
+.inverted .first-name,
+.inverted .last-name {
+    color: black; /* Black text for the inverted theme */
+}
+
+.inverted .button-o {
+    background-color: black; /* Black button for inverted theme */
+    border: 2px solid black;
+    color: white; /* White text inside the button */
+}

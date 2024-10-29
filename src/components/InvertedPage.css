@@ -1,0 +1,10 @@
+.App-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 4rem);
+    /* Adjust height to account for header */
+    margin-top: 4rem;
+    /* Add margin to push content below the header */
+    color: black;
+}

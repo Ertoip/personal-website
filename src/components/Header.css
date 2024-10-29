@@ -1,0 +1,46 @@
+.top-header {
+    width: 100%;
+    padding: 1.2rem 0;
+    text-align: center;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;    
+    background-color: rgba(0, 0, 0, 0.7); /* Default dark background for standard page */
+    align-items: center;
+}
+
+.top-header.inverted {
+    border-bottom: 1px solid;
+    background-color: rgba(255, 255, 255, 0.9); /* White background for inverted theme */
+    border-image: linear-gradient(to right, transparent, #000, transparent) 1;
+}
+
+.top-header h1 {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.top-header.inverted h1 {
+    color: black;
+}
+
+nav {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    width: 60%; /* Adjust this value to control how far apart the links are */
+}
+
+/* Add some spacing between links on smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+}

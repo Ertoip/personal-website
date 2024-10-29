@@ -1,0 +1,38 @@
+.custom-cursor {
+    position: fixed;
+    width: 15px; /* Increased base size */
+    height: 15px; /* Increased base size */
+    background-color: white; /* Default to white cursor */
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transform-origin: center; /* Ensures the cursor grows from its center */
+    z-index: 10000;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out, box-shadow 0.2s ease-out;
+
+    /* Shadow for white cursor */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.custom-cursor.inverted {
+    background-color: black; /* Inverted mode cursor is black */
+    
+    /* Shadow for black cursor */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.cursor-hover {
+    /* Increase size on hover */
+    width: 25px;
+    height: 25px;
+}
+
+.cursor-clicking {
+    /* Enlarge cursor on click, with scaling happening from the center */
+    transform: translate(-50%, -50%) scale(2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.custom-cursor.inverted.cursor-clicking {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
