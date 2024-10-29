@@ -1,6 +1,7 @@
 {
   "name": "your_app",
   "version": "0.1.0",
+  "homepage": "https://ertoip.github.io/personal-website",
   "private": true,
   "dependencies": {
     "@tsparticles/engine": "^3.5.0",
